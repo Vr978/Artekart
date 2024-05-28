@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" href="/css/styvesh.css">
+  <style>
+    /* Add custom styles here */
+    /* ... */
+
+    .cart-texth2 {
+      margin-left: 10px;
+    }
+
+    .cart-texth3 {
+      margin-left: 10px;
+    }
+
+    .cart-item img {
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+    }
+
+    .total-price {
+      font-weight: bold;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  {{> navbar}}
+
+  <section class="blue">
+
+    <div id="cart-items"></div> <!-- Display element for cart item names -->
+
+    <div class="blue-tac">
+      <button class="addni" onclick="redirectToGifting1()">Add New Item</button>
+      <button class="total addni" onclick="calculateTotal()">Total</button>
+      <button class="cc addni" onclick="clearCart()">Clear Cart</button> <!-- Added onclick event -->
+    </div>
+
+   
+
+    <div class="total-price" id="total-price"></div> <!-- Display element for total price -->
+
+  </section>
+
+  <script>
+    var cartItems = []; // Array to store cart items
+
+    function howproduct() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productName = urlParams.get("name");
+      const productImage = urlParams.get("img");
+      const productPrice = parseFloat(urlParams.get("price")); // Convert price to a number
+      const productQuantity = urlParams.get("quantity");
+
+      // Create an object to represent the product
+      var product = {
+        name: productName,
+        image: decodeURIComponent(productImage),
+        price: productPrice,
+        quantity: productQuantity
+      };
+
+      // Add the product to the cartItems array
+      cartItems.push(product);
+
+      // Call the function to display cart items
+      showCartItems();
+    }
+
+    // Function to clear the cart
+    function clearCart() {
+  cartItems = []; // Empty the cartItems array
+  localStorage.removeItem('cartItems'); // Remove cartItems from local storage
+  showCartItems(); // Call the function to update the display
+
+  // Set total price to 0
+  calculateTotal();
+}
+
+   
+function showCartItems() {
+  var cartDisplay = ""; // String to store the cart item details
+
+  // Check if cartItems array is empty
+  if (cartItems.length === 0) {
+    cartDisplay = '<div><p style="margin-top:50px;">Cart Empty</p></div>'; // Display "Cart Empty" message
+  } 
+  else {
+    // Iterate over the cartItems array and concatenate the item details
+    for (var i = 0; i < cartItems.length; i++) {
+      cartDisplay += '<div class="cart-item">';
+      cartDisplay += '<img src="' + cartItems[i].image + '" alt="Product Image">';
+      cartDisplay += '<span class="cart-texth2">' + cartItems[i].name + '</span>';
+      cartDisplay += '<span class="cart-texth2">' + cartItems[i].quantity + '</span>';
+      cartDisplay += '<span class="cart-texth3">' + cartItems[i].price + '</span>';
+      cartDisplay += '</div>';
+    }
+  }
+
+  // Update the display element with the cart item details
+  var cartItemsElement = document.getElementById("cart-items");
+  if (cartItemsElement) {
+    cartItemsElement.innerHTML = cartDisplay;
+  }
+}
+
+// Call the showCartItems() function initially to display cart items
+showCartItems();
+
+
+    // Function to calculate and display the total price
+    function calculateTotal() {
+      var totalPrice = 0;
+
+      // Iterate over the cartItems array and calculate the total price
+      for (var i = 0; i < cartItems.length; i++) {
+        totalPrice += (cartItems[i].price*cartItems[i].quantity);
+      }
+
+      // Update the display element with the total price
+      document.getElementById("total-price").textContent = "Total Price: " + totalPrice.toFixed(2);
+    }
+
+    // Function to redirect to gifting1.hbs
+    function redirectToGifting1() {
+      // Store the cartItems in local storage before redirecting
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      window.location.href = 'http://localhost:2804/gifting1';
+    }
+
+    // Check if cartItems exist in local storage and retrieve them
+    var storedCartItems = localStorage.getItem('cartItems');
+    if (storedCartItems) {
+      cartItems = JSON.parse(storedCartItems);
+    }
+
+    // Call the howproduct function
+    howproduct();
+  </script>
+
+  {{> footer}}
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css/"
+    />
+    <style>
+      .blog{ display: flex; flex-direction: row-reverse; } .blog p{ max-width:
+      50%; line-height: 50px; font-family: Cambria, Cochin, Georgia, Times,
+      'Times New Roman', serif; font-size: 25px; padding-left: 20px; margin-top:
+      50px; } .blog img{ position: absolute; left: 50px; max-width: 50%; width:
+      40%; height: 50%; border: 5px solid antiquewhite; border-radius: 28px;
+      margin-top: 30px; } .blog1{ display: flex; flex-direction: row; } .blog1
+      p{ max-width: 50%; line-height: 50px; font-family: Cambria, Cochin,
+      Georgia, Times, 'Times New Roman', serif; font-size: 25px; padding-left:
+      20px; margin-top: 80px; } .blog1 img{ position: absolute; right: 50px;
+      max-width: 50%; width: 40%; height: 50%; border: 5px solid antiquewhite;
+      border-radius: 28px; margin-top: 20px; } .me{ background-color:
+      antiquewhite; height: 215vh; }
+    </style>
+  </head>
+  <body>
+    {{>navbar}}    
+    <section class="me" style="height: 250vh;">
+      <section class="be">
+        <div class="blog">
+          <p>India's Heritage: A Tapestry of Diversity
+India boasts a heritage as diverse as its people. From the majestic palaces of Rajasthan to the intricately carved temples of Tamil Nadu, the country is a treasure trove of architectural marvels. With a history spanning thousands of years, India's heritage offers a glimpse into the nation's rich cultural tapestry.
+          </p>
+
+          <div class="img">
+            <img src="img//eleph.png" alt="" />
+          </div>
+        </div>
+
+      </section>
+      <br />
+      <br />
+      <section class="be">
+        <div class="blog1">
+          <p>Preserving Ancient Traditions
+India's heritage is not limited to its architecture alone. The country is renowned for its traditional art forms, including classical dance, music, and handicrafts. These age-old practices have been passed down through generations, preserving the essence of India's cultural legacy. From the classical Odissi dance of Odisha to the vibrant Madhubani paintings of Bihar, each region celebrates its unique artistic heritage.
+          </p>
+
+          <div class="img">
+            <img src="img//he.jpeg" alt="" />
+          </div>
+        </div>
+
+      </section>
+
+      <section class="be">
+        <div class="blog">
+          <p>Spiritual Significance: Sacred Sites and Rituals
+India is often referred to as the birthplace of several major religions, including Hinduism, Buddhism, Jainism, and Sikhism. The country is home to numerous sacred sites and pilgrimage centers, such as Varanasi, Rishikesh, Bodh Gaya, and the Golden Temple. These sites attract devotees from around the world, offering a glimpse into the profound spiritual traditions that have shaped India's heritage.
+          </p>
+
+          <div class="img">
+            <img src="img/h2.jpeg" alt="" />
+          </div>
+        </div>
+
+      </section>
+
+      <section class="be">
+        <div class="blog1">
+          <p>Living Heritage: Festivals and Cuisine
+India's heritage is alive and vibrant, manifested through its colorful festivals and diverse cuisine. From the grand celebrations of Diwali and Holi to the sacred fasting of Ramadan and the joyful festivities of Christmas, the country embraces a myriad of cultural traditions. Additionally, India's culinary heritage, with its rich blend of spices and flavors, continues to tantalize taste buds, showcasing the country's diverse regional cuisines.
+          </p>
+
+          <div class="img">
+            <img src="img/h3.jpeg" alt="" />
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+
+    {{>footer}}
+
+  </body>
+</html>

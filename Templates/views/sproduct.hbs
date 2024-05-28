@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArteKart</title>
+  
+    <link href="/css/styvesh.css" rel="stylesheet" >
+   
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  
+
+</head>
+<body>
+
+   {{>navbar}}
+
+   <section id="prodetails">
+  <div class="single-pro-image">
+    <img src="" width="570" height="520" id="MainImg" alt="">
+  </div>
+
+  <div class="single-pro-details bg">
+    <h6>Products-Detail</h6>
+    <h4 id="product-name"></h4>
+    <h2 class="product-price" id="product-price"></h2>
+   <input type="number" id="quantityInput" value="1" min="1">
+<button onclick="storeQuantity()" class="normal">Store Quantity</button>
+  <button class="normal" onclick="howproduct()">Add to Cart</button>
+    <h4>Product Description</h4>
+    <span id="product-details"></span>
+  </div>
+</section>
+
+  
+   
+   
+
+
+   {{>footer}}
+  
+      <script>
+
+  function showProductDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productName = urlParams.get("name");
+    const productDetails = urlParams.get("details");
+    const productImage = urlParams.get("image");
+    const productPrice = urlParams.get("price");
+
+    // Update the product details in the prodetails section
+    document.getElementById("product-name").textContent = productName;
+    document.getElementById("product-details").textContent = productDetails;
+    document.getElementById("MainImg").src = productImage;
+    document.getElementById("product-price").textContent = "Price : " + "$" + productPrice;
+  }
+
+  function storeQuantity() {
+  var quantity = document.getElementById("quantityInput").value;
+  console.log("Quantity:", quantity);
+  // Perform further operations with the quantity value as needed
+}
+
+
+  // Call the showProductDetails function
+  showProductDetails();
+
+  function howproduct() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productImage = decodeURIComponent(urlParams.get("image"));
+  console.log(decodeURIComponent(urlParams.get("image")));
+  const productName = urlParams.get("name");
+  const productPrice = urlParams.get("price");
+  const productQuantity = urlParams.get("quantity");
+
+  let quantity = parseInt(document.querySelector("input[type='number']").value);
+  if (quantity < 1) {
+    quantity = 1; // Set quantity to 1 if it is less than 1
+  }
+
+  const url = `cart1.hbs?&img=${encodeURIComponent(productImage)}&name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&quantity=${encodeURIComponent(quantity)}`;
+  window.location.href = url;
+}
+      </script>
+      
+    
+   
+  
+  </body>
+  </html>

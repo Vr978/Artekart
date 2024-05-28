@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link href="css/style.css" rel="stylesheet" >
+</head>
+<body>
+
+    {{>navbar}}
+
+    <section id="product1" class="section-p1">
+        <h2>3D Visual Library</h2>
+        <p>Watch Products in 3D</p>
+        <div class="pro-container">
+            <div class="pro" onclick="redirectToURL('http://localhost:3000/')">
+                <img src="img/bc.jpg" width="400" height="270" alt="">
+                <div class="des">
+                    <h5>Handmade Brass Clock</h5>
+                </div>
+            </div>
+
+            <div class="pro" onclick="redirectToURL('http://localhost:3001/')">
+                <img src="img/hc.jpg" width="400" height="270" alt="">
+                <div class="des">
+                    <h5>Ancient Design Plates</h5>
+                </div>
+            </div>
+
+            <div class="pro" onclick="redirectToURL('http://localhost:3002/')">
+                <img src="img/lc.jpeg" width="400" height="270" alt="">
+                <div class="des">
+                    <h5>Ancient Design Plates</h5>
+                </div>
+            </div>
+
+            <div class="pro" onclick="redirectToURL('http://localhost:3003/')">
+                <img src="img/c.avif" width="400" height="270" alt="">
+                <div class="des">
+                    <h5>Coffee Cart</h5>
+                </div>
+            </div>
+        </div>
+
+          <h2 style="color: rgb(235, 159, 59); margin-top:20px;">More Coming Soon....</h2>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <!-- Newsletter section content -->
+    </section>
+
+    <script>
+        function redirectToURL(url) {
+            window.location.href = url;
+        }
+    </script>
+
+    {{>footer}}
+</body>
+</html>

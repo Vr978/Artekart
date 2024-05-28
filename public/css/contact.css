@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+/*Header Start*/
+#header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 15px 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #59c9c1;
+  transition: 0.5s;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+  transition: 0.5s;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/*Footer End
+
+
+
+  /*--------------------------------------------------------------
+  # About
+  --------------------------------------------------------------*/
+#about h1 {
+  padding: 15px 0px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.f h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.g {
+  margin-top: 60px;
+}
+
+.slider {
+  margin: 60px 0px;
+}
+
+.f p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.igg {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.igg img {
+  padding-right: 35px;
+  padding-bottom: 30px;
+}
+
+#about p {
+  text-align: center;
+  max-width: 70%;
+  padding: 0px 150px;
+  line-height: 40px;
+}
+
+#about {
+  background-color: rgba(241, 227, 209, 0.997);
+}
+
+.wrapper {
+  height: 400px;
+  width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.wrapper .card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.wrapper:hover > .front-face {
+  transform: rotateY(-180deg);
+}
+
+.wrapper .card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.wrapper .back-face {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+
+.wrapper:hover > .back-face {
+  transform: rotateY(0deg);
+}
+
+.wrapper .back-face img {
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+.wrapper .back-face .info {
+  text-align: center;
+}
+
+.back-face .info .title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.back-face ul {
+  display: flex;
+}
+
+.back-face ul a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+  transition: all 0.5s ease;
+}
+
+.back-face ul a:hover {
+  color: #1cc7d0;
+  border-color: #1cc7d0;
+  background: linear-gradient(375deg, transparent, transparent);
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contact::before {
+  content: "";
+  background-image: url("/img/WhatsApp Image 2023-05-23 at 1.34.48 PM.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: brightness(60%); /* Use a CSS filter to lighten the background image */
+  z-index: -1;
+}
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+}
+
+.contact {
+  height: 120vh;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ebdfdf;
+  text-decoration: underline;
+}
+
+.contact .content p {
+  font-weight: 300;
+  color: #98f698;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container .info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .info .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.container .info .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.container .info .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+}
+
+.container .info .box .text h3 {
+  font-weight: 50;
+  color: #d4f2f6;
+}
+
+.container .info .box .text p {
+  color: #dceff1;
+}
+
+.contactform {
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+
+.contactform h2 {
+  font-size: 30px;
+  color: #e88686;
+  font-weight: 500;
+}
+
+.contactform .inputbox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactform .inputbox input,
+.contactform .inputbox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactform .inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0px;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactform .inputbox button {
+  width: 100px;
+  background: #f37a47;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}/*# sourceMappingURL=contact.css.map */

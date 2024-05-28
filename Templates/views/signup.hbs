@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="css/login.css">
+  <script defer src="js/login.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/register" method="POST">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<div class="h_google_button h_google_center" data="google"><p class="png-google" alt=""></p><span class="h_google_text">Sign in with Google</span></div>
+				<a href="https://www.facebook.com" class="social"><i class="fa-brands fa-facebook"></i></a>
+				<a href="https://www.linkedin.com" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" name="name" />
+			<input type="email" placeholder="Email" name="email"/>
+			<input type="password" placeholder="Password" name="password"/>
+			<input type="password" placeholder="ConfirmPassword" name="confirmPassword"/>
+			<button type="submit" value="Register">Sign Up</button>
+			<a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Home</a>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/login" method="POST">
+			<h1>Login</h1>
+			<div class="social-container">
+                <div class="h_google_button h_google_center" data="google"><p class="png-google" class="fa-brands fa-google"alt=""></p><span class="h_google_text">Sign in with Google</span></div>
+				<a href="https://www.facebook.com" class="social"><i class="fa-brands fa-facebook"></i></a>
+				<a href="https://www.linkedin.com" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" name="email" />
+			<input type="password" placeholder="Password" name="password"/>
+			<a href="/">Forgot your password?</a>
+			<button>Sign In</button>
+			<a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Home</a>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Start Your Journey</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Account Not Created!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		Created by <i class="fa fa-heart"></i> by
+		<a target="_blank" href="/aboutus">KVSP here</a>.
+	</p>
+</footer>
+<script src="js/login.js"></script>
+</body>
+</html>
