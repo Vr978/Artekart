@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const URL = "mongodb+srv://vrajchaudhary05:Supersecretpassword@artekart.lerhncn.mongodb.net/?retryWrites=true&w=majority";
+const URL = "mongodb+srv://vrajchaudhary05:Supersecretpassword@artekart.lerhncn.mongodb.net/?retryWrites=true&w=majorty";
 mongoose.set('strictQuery', false);
 
 //  Creating a database
