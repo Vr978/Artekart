@@ -18,10 +18,20 @@ Artekart: A marketplace built for handicraft artists, offering:
 ### UI Design
 
 ![UI Image](./public/img/UI1.png)
+
+
 ![UI Image](./public/img/UI2.png)
+
+
 ![UI Image](./public/img/UI3.png)
+
+
 ![UI Image](./public/img/UI4.png)
+
+
 ![UI Image](./public/img/UI5.png)
+
+
 ![UI Image](./public/img/UI6.png)
 
 
