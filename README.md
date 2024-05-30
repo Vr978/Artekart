@@ -32,7 +32,6 @@ Artekart: A marketplace built for handicraft artists, offering:
 ![UI Image](./public/img/UI5.png)
 
 
-![UI Image](./public/img/UI6.png)
 
 
 ## Getting Started
